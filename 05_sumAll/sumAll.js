@@ -3,7 +3,7 @@ const sumAll = function(...bounds) {
         typeof bounds[0] !== "number" ||
         typeof bounds[1] !== "number")
     {
-            return "ERROR";
+        return "ERROR";
     }
     bounds = bounds.slice(0,2).sort();
     return (bounds[0] < bounds[1] ? bounds[1] + sumAll(bounds[0], --bounds[1]) : bounds[0]);
